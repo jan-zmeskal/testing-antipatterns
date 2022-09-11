@@ -1,9 +1,12 @@
 *** Settings ***
-Library    EshopLibrary
-Test Setup    Clear shopping cart
+Library         EshopLibrary
+
+Test Setup      Clear shopping cart
+
 
 *** Variables ***
 ${TEST_ITEM}    Rubber Duck Yellow
+
 
 *** Test Cases ***
 Add one item to shopping cart

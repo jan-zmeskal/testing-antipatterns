@@ -44,7 +44,7 @@ class EshopLibrary:
     def delete_user_via_db(self, username):
         self.user_created = False
 
-    def create_user_via_db(self, username, passowrd):
+    def create_user_via_db(self, *args, **kwargs):
         self.user_created = True
 
     def add_to_cart(self, item, quantity):
@@ -55,3 +55,35 @@ class EshopLibrary:
 
     def clear_shopping_cart(self):
         self.cart_items = 0
+
+    @staticmethod
+    def log_in_as_admin():
+        ...
+
+    @staticmethod
+    def go_to_user_list():
+        ...
+
+    @staticmethod
+    def open_user_edit_dialog(username):
+        ...
+
+    @staticmethod
+    def change_user_properties(*args, **kwargs):
+        ...
+
+    @staticmethod
+    def check_that_user_exists_in_list(username):
+        ...
+
+    @staticmethod
+    def open_user_view_dialog(username):
+        ...
+
+    @staticmethod
+    def get_user_property(property_name):
+        match property_name:
+            case "gender":
+                return "male"
+            case "age":
+                return 16
