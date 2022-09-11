@@ -4,6 +4,7 @@ from os import stat
 class EshopLibrary:
     ROBOT_LIBRARY_SCOPE = "SUITE"
     user_created = False
+    cart_items = 0
 
     @staticmethod
     def go_to_user_registration_page():
@@ -45,3 +46,12 @@ class EshopLibrary:
 
     def create_user_via_db(self, username, passowrd):
         self.user_created = True
+
+    def add_to_cart(self, item, quantity):
+        self.cart_items += int(quantity)
+
+    def get_number_of_items_in_cart(self):
+        return self.cart_items
+
+    def clear_shopping_cart(self):
+        self.cart_items = 0
