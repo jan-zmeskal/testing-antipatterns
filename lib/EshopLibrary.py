@@ -41,7 +41,7 @@ class EshopLibrary:
     def delete_user_via_db(self, username):
         self.user_created = False
 
-    def create_user_via_db(self, *args, **kwargs):
+    def create_user_via_db(self, username, password, gender=None, age=None):
         self.user_created = True
 
     def add_to_cart(self, item, quantity):

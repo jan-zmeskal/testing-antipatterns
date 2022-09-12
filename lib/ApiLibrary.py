@@ -66,7 +66,7 @@ class ApiLibrary:
         ...
 
     @staticmethod
-    def configure_smtp_sender(*args, **kwargs):
+    def configure_smtp_sender(from_header, redirect_to=None):
         ...
 
     @staticmethod

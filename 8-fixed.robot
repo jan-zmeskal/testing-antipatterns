@@ -3,8 +3,8 @@ Library     EshopLibrary
 
 
 *** Test Cases ***
-Admin can create new product
-    [Documentation]    Create a new product and check that valid identifier has been generated for it.
+Admin can create new product in catalog
+    [Documentation]    Create a new product as admin and check that valid identifier has been generated for it.
     [Setup]    Go to new product page
     ${prodct_unique_identifier}=    Create new product    name=Rubber duck    price=10    quantity=10    public=true
     Check that number is valid Luhn number    ${prodct_unique_identifier}
