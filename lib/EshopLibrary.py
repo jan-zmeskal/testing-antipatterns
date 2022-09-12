@@ -1,6 +1,3 @@
-from os import stat
-
-
 class EshopLibrary:
     ROBOT_LIBRARY_SCOPE = "SUITE"
     user_created = False
@@ -87,3 +84,11 @@ class EshopLibrary:
                 return "male"
             case "age":
                 return 16
+
+    @staticmethod
+    def go_to_new_product_page():
+        ...
+
+    @staticmethod
+    def create_new_product(name, price, quantity, public):
+        return "1234567812345670"
